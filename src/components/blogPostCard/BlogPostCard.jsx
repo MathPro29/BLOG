@@ -32,14 +32,13 @@ function BlogPostCard() {
                               ? " 4px solid rgb(226, 232, 240)"
                               : " 4px solid rgb(30, 41, 59)",
                         }}
-                        className={`h-full shadow-lg  hover:-translate-y-1 cursor-pointer hover:shadow-gray-400
+                        className={`h-full shadow-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-400
                         ${mode === "dark" ? "shadow-gray-700" : "shadow-xl"} 
                         rounded-xl overflow-hidden`}
                       >
                         {/* Blog Thumbnail  */}
                         <img
-                          onClick={() => navigate(`/bloginfo/${id}`)}
-                          className=" w-full"
+                          className="w-full h-48 md:h-60 lg:h-72 object-cover" // Different heights for different screen sizes
                           src={thumbnail}
                           alt="blog"
                         />
@@ -85,6 +84,13 @@ function BlogPostCard() {
                             Photo booth fam kinfolk cold-pressed sriracha
                             leggings jianbing microdosing tousled waistcoat.
                           </p>
+                          <div  className="flex justify-end">
+
+                            <p
+                            onClick={() => navigate(`/bloginfo/${id}`)}
+                            className="cursor-pointer text-blue-500 hover:underline"
+                            >ดูโพสต์</p>
+                          </div>
                         </div>
                       </div>
                     </div>

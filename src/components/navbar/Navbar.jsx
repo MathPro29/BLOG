@@ -110,7 +110,7 @@ export default function Nav() {
                         </div>
 
                         {/* Search component for desktop */}
-                        <div className="hidden lg:block">
+                        <div className="hidden lg:block ">
                             <Search onSearch={handleSearch} />
                         </div>
 

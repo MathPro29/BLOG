@@ -51,7 +51,7 @@ function AllBlogs() {
                         {/* Blog Thumbnail  */}
                         <img
                           onClick={() => navigate(`/bloginfo/${id}`)}
-                          className=" w-full"
+                          className="w-full h-48 md:h-60 lg:h-72 object-cover"
                           src={thumbnail}
                           alt="blog"
                         />
