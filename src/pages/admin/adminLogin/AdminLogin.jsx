@@ -12,6 +12,7 @@ import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../../firebase/FirebaseConfig";
+import Nav from "../../../components/navbar/Navbar";
 
 export default function AdminLogin() {
   const context = useContext(myContext);
@@ -39,6 +40,8 @@ export default function AdminLogin() {
   };
 
   return (
+    <>
+    <Nav/>
     <div className="flex justify-center items-center h-screen">
       {/* Card  */}
       <Card
@@ -118,5 +121,6 @@ export default function AdminLogin() {
         </CardBody>
       </Card>
     </div>
+    </>
   );
 }
